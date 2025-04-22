@@ -1,18 +1,42 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.XR.CoreUtils;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SceneSwitch : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public string sceneName;
+
+    private FadeInOut fade;
+
+    private void Start()
     {
-        
+        fade = GetComponent<FadeInOut>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider c)
     {
-        
+        if (c.CompareTag("MainCamera"))
+        {
+            SceneManager.LoadScene(sceneName);
+        }
+    }
+
+    public void ToScene()
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+
+    public void ToOceanBottom()
+    {
+        StartCoroutine(ToOceanBottomHelper());
+    }
+
+    public IEnumerator ToOceanBottomHelper()
+    {
+        fade.FadeIn();
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene("ocean_bottom");
     }
 }
