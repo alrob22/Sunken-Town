@@ -4,7 +4,22 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/BegUI.unity
+    guid: eadac429d09c84a8b81a12652844ae6a
+  - enabled: 1
+    path: Assets/Scenes/AboveWater.unity
+    guid: 40e7a0fd30fb1084d965681e865652d8
+  - enabled: 1
+    path: Assets/Scenes/ocean_bottom.unity
+    guid: 7bb2a2c2874bf4f8d895c1c72ce14a9d
+  - enabled: 1
+    path: Assets/Scenes/LibraryScene.unity
+    guid: 889228d6f8c134dd18d212759799b6c5
+  - enabled: 1
+    path: Assets/Scenes/HouseGrandma.unity
+    guid: 8017007ab841507438b95bc7e19d5715
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: bf836b19df599864581c95be3b1ddfc9, type: 2}
     xr.sdk.mock-hmd.settings: {fileID: 11400000, guid: d3edab52c3e81df46a0a8f1a29bd5e2c, type: 2}

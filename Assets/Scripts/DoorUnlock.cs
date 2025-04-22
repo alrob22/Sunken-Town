@@ -18,6 +18,9 @@ public class DoorUnlock : MonoBehaviour
         if (other.gameObject.CompareTag("Key"))
         {
             Debug.Log("Door unlocked!");
+
+            this.gameObject.SetActive(false);
+
             isUnlocked = true;
         } else
         {
